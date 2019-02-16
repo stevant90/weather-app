@@ -1,0 +1,29 @@
+.ErrorMessage {
+  width: 800px;
+  height: 500px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: linear-gradient(
+    135deg,
+    rgba(249, 210, 169, 1) 0%,
+    rgba(205, 142, 76, 1) 0%,
+    rgba(216, 143, 65, 1) 20%,
+    rgba(221, 143, 60, 1) 29%,
+    rgba(231, 171, 108, 1) 58%,
+    rgba(239, 195, 149, 1) 83%,
+    rgba(239, 195, 149, 1) 99%
+  );
+}
+
+.ErrorMessage__text {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  &:last-child {
+    font-size: 20px;
+  }
+} 

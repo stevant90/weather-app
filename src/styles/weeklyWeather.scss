@@ -1,0 +1,56 @@
+.WeeklyWeather {
+  height: 40%;
+  display: flex;
+}
+
+.WeeklyWeather__card {
+  flex: 1 0 12%;
+  z-index: 1;
+  text-align: center;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 18px;
+  border-right: .5px solid rgba(229, 229, 229, 0.9);
+  background-color: rgba(255, 255, 255, 0.102);
+  text-shadow: 1px 1px 5px #061823;
+}
+
+.WeeklyWeather__card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: calc(100% - 15px);
+  padding: 0 0 15px;
+  transition: all .4s ease-in-out;
+        
+  &:hover {    
+    background: linear-gradient(135deg, #f9d2a9 0%, #cd8e4c 0%, #d88f41 20%, #dd8f3c 29%, #e7ab6c 58%, #efc395 83%, #efc395 99%);
+    transform: translateY(-30px);
+    padding-bottom: 50px;
+    transition: transform .3s ease-out;
+  }
+}
+
+.WeeklyWeather__icon {
+  width: 100%;
+  opacity: .8;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.WeeklyWeather__temp {
+    margin-bottom: 25px;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.WeeklyWeather__days {
+  font-size: 12px;
+  opacity: .8;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+

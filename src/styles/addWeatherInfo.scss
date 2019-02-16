@@ -1,0 +1,48 @@
+.AdditionalWeatherInfo {
+  height: 40%;
+  background: linear-gradient(
+    135deg,
+    rgba(249, 210, 169, 1) 0%,
+    rgba(205, 142, 76, 1) 0%,
+    rgba(216, 143, 65, 1) 20%,
+    rgba(221, 143, 60, 1) 29%,
+    rgba(231, 171, 108, 1) 58%,
+    rgba(239, 195, 149, 1) 83%,
+    rgba(239, 195, 149, 1) 99%
+  );
+  box-shadow: 0px 0px 2px 1px rgba(26, 26, 26, 0.32);
+}
+
+.AdditionalWeatherInfo__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px 0 10px;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.AdditionalWeatherInfo__text {
+  width: 50%;
+  text-align: center;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  text-shadow: 1px 1px 3px #061823;
+}
+
+.AdditionalWeatherInfo__units {
+  font-size: 20px;
+  margin-bottom: 5px;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.AdditionalWeatherInfo__title {
+  font-size: 12px;
+  opacity: 0.7;
+}

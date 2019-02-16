@@ -1,0 +1,137 @@
+.CurrentWeather {
+  position: relative;
+  height: calc(60% - 15px);
+  margin-bottom: 15px;
+  background: linear-gradient(
+    135deg,
+    rgba(249, 210, 169, 1) 0%,
+    rgba(205, 142, 76, 1) 0%,
+    rgba(216, 143, 65, 1) 20%,
+    rgba(221, 143, 60, 1) 29%,
+    rgba(231, 171, 108, 1) 58%,
+    rgba(239, 195, 149, 1) 83%,
+    rgba(239, 195, 149, 1) 99%
+  );
+  box-shadow: 0px 0px 2px 1px rgba(26, 26, 26, 0.32);
+}
+
+.CurrentWeather__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 20px 15px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  height: 100%;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-shadow: 1px 1px 3px #061823;
+  transition: padding .5s, padding-right .5s ease-in;
+}
+
+.CurrentWeather__info {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.CurrentWeather__icon {
+  width: 55%;
+  position: relative;
+  top: -20px;
+  right: -20px;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.CurrentWeather__text {
+  width: 55%;
+}
+
+.CurrentWeather__temp {
+  font-size: 35px;
+  margin-left: -3px;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.CurrentWeather__summary {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 5px;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.CurrentWeather__updateText {
+  position: relative;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  span { margin-right: 5px; }    
+}
+
+.CurrentWeather__refreshIcon {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all .4s ease-in;
+}
+
+.Chart {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .8;
+}
+
+.line {
+  fill: transparent;
+  stroke: rgb(254, 223, 45);
+  stroke-dasharray: 10% 1150;
+  stroke-linecap: round;
+
+  &--fade {
+    stroke-opacity: 0;
+  }
+
+  &--animate {
+    animation: dash 1s linear forwards;
+  }
+}
+
+.chart-animation-appear {
+  .line {
+    stroke-opacity: 1;
+    animation: dash 1.4s linear forwards;
+  }
+}
+
+.chart-animation-appear.chart-animation-appear-active {
+  .line {
+    animation: dash 1.4s linear forwards;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1350;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+

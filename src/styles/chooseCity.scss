@@ -1,0 +1,59 @@
+.ChooseCity {
+  padding: 20px 20px 0;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 5px #061823;
+}
+
+.ChooseCity__select-wrapper {
+  position: relative;
+  width: 55%;
+}
+
+.ChooseCity__select {
+  width: 100%;
+  list-style: none;
+  height: 45px;
+}
+
+.ChooseCity__select-item {
+  font-size: 45px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform .5s .3s,opacity .6s .2s, visibility .6s .2s ease-in-out;
+
+  &--fadeIn {
+    transform: translateY(-45px);
+    transition: transform .7s,opacity .5s, visibility .5s .7s ease-in;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.ChooseCity__arrow {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    cursor: pointer;
+    transition: transform .7s ease-in-out;
+
+    &--rotate {
+      transform: rotate(180deg);
+      transition: transform .7s ease-in-out;
+    }
+}
+
+.currentDate {
+  font-size: 20px;
+  font-weight: 100;
+  margin-top: 10px;
+  transition: opacity .7s ease-in;
+
+   &--fadeIn {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .7s, visibility .4s .7s ease-in;
+  }
+}
+
+
